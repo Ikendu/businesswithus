@@ -1,0 +1,38 @@
+<div id="hair-body">
+    <br>
+
+<div class="container">
+  <h1>You Konet better</h1>
+  <p>welcome to better konet</p>
+
+
+
+  <% @creates.each do |create| %>
+  <div id="margin" class="card mb-3 float-start" style="max-width: 540px;" >
+    <div class="row g-0 post">
+      <div class="col-md-7">
+        <a href="<%= "/files/#{create.image}" %> ">
+          <img src="<%= "/files/#{create.image}" %>" class="img-fluid rounded-start" alt="...">
+        </a>
+      </div>
+      <div class="col-md-4">
+        <div class="card-body ">
+          <h5 class="card-title"><%= create.name %></h5>
+          <p class="card-text"><%= create.makers %></p>
+          <p class="card-text"><%= create.color %></p>
+          <p class="card-text"><%= create.price %></p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+        <% if @current_user %>
+        <div class="card-body ">
+        	<%= button_to "Delete", "/home/#{create.id}/destroy",method: :post, class:"btn btn-danger float-start marg"%>
+          <%= link_to "Edit", "/home/#{create.id}/edit", class: "btn btn-primary "%>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>	
+<% end %>
+</div>
+</div>
+
