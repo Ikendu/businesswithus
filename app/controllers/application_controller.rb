@@ -12,8 +12,5 @@ class ApplicationController < ActionController::Base
 			redirect_to("/admin")
 		end
 	end
-
-	def hello
-		render html: "Hello World"
-	end
+	
 end

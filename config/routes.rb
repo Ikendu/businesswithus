@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   get "about" => "home#about"
   get "hair" => "home#hair"
   get "admin" => "home#admin"
-  get "new_admin" => "home#new_admin"
+  get "ikendu" => "home#ikendu"
+  post "create_admin" => "home#create_admin"
 
   post "home/add" => "home#add"  
   get "home/:id/edit" => "home#edit"

@@ -17,10 +17,6 @@ class HomeController < ApplicationController
     def admin
     end
 
-    def new_admin
-      
-    end
-
     def login
       @user = User.find_by(email: params[:email], password: params[:password])
       if @user
@@ -34,6 +30,25 @@ class HomeController < ApplicationController
         render("admin")
       end
 
+    end
+
+    def ikendu
+     @create = Create.new
+     @create = Create.find_by(id: params[:id]) 
+    end
+
+    def create_admin
+      @create = User.new(
+        name: params[:name],
+        email: params[:email],
+        password: params[:password]
+        )
+      if @create.save
+        flash[:notice] = "Admin successfully created"
+        redirect_to("/admin")
+      else
+        render("new_admin")
+      end
     end
 
     def new
