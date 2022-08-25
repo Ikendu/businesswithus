@@ -1,24 +1,19 @@
-# README
+# Business With Us by Ikendu 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+With this website Admin can create, Edit and Delete a Product or Service
 
-Things you may want to cover:
+Things that was used to create this site:
 
-* Ruby version
+* Ruby on Rails
 
 * System dependencies
 
 * Configuration
 
-* Database creation
+* SQlite Database during development (Runs on Postgres on deployment)
 
-* Database initialization
+* HTML and CSS
 
-* How to run the test suite
+* Bootstrap and W3-CSS
 
 * Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
