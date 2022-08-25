@@ -17,6 +17,10 @@ class HomeController < ApplicationController
     def admin
     end
 
+    def new_admin
+      
+    end
+
     def login
       @user = User.find_by(email: params[:email], password: params[:password])
       if @user
